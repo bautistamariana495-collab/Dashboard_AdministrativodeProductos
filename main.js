@@ -93,6 +93,6 @@ if (document.getElementById('form-nuevo-producto')) {
         });
         const data = await res.json();
         alert(`¡Éxito! Producto ID ${data.id} creado.`);
-        window.location.href = 'index.htm';
+        window.location.href = 'index.html';
     };
 }
