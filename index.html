@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopMaster - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="encabezado-admin">
+        <h1 class="titulo-marca">ShopMaster Admin</h1>
+        <div class="herramientas">
+            <div class="contenedor-busqueda">
+                <input type="text" id="buscador" placeholder="Presiona Enter para buscar...">
+                <button id="btn-buscar">🔍</button>
+            </div>
+            <a href="agregar.html" class="btn-primario">+ Nuevo Producto</a>
+        </div>
+    </header>
+
+    <nav class="filtros-bar">
+        <div class="grupo-filtro">
+            <label>Categoría:</label>
+            <select id="filtro-categoria">
+                <option value="">Todas</option>
+            </select>
+        </div>
+        <div class="grupo-filtro">
+            <label>Ordenar:</label>
+            <select id="ordenar-por">
+                <option value="title-asc">Título (A-Z)</option>
+                <option value="title-desc">Título (Z-A)</option>
+                <option value="price-asc">Precio (Menor a Mayor)</option>
+                <option value="price-desc">Precio (Mayor a Menor)</option>
+            </select>
+        </div>
+    </nav>
+
+    <main class="panel-principal">
+        <table class="tabla-inventario">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla"></tbody>
+        </table>
+    </main>
+
+    <footer class="paginacion">
+        <button id="btn-anterior" class="btn-nav">« Anterior</button>
+        <span id="info-paginacion">Cargando...</span>
+        <button id="btn-siguiente" class="btn-nav">Siguiente »</button>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

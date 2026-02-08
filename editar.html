@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopMaster - Editar Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor-formulario">
+        <h1>Modificar Producto</h1>
+        <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" id="titulo">
+        </div>
+        <div class="form-group">
+            <label>Precio ($):</label>
+            <input type="number" id="precio" step="0.01">
+        </div>
+        <div class="form-group">
+            <label>Categoría:</label>
+            <select id="categoria"></select>
+        </div>
+        <div class="form-group">
+            <label>Descripción:</label>
+            <textarea id="descripcion" rows="4"></textarea>
+        </div>
+        <div id="mensaje-exito" style="display:none; color: green; margin: 10px 0;"></div>
+        <button type="button" class="btn-nav" onclick="window.location.href='index.html'">Cancelar</button>
+        <button class="btn-primario" onclick="editarProducto()">Actualizar Cambios</button>
+    </main>
+    <script src="editar.js"></script>
+</body>
+</html>

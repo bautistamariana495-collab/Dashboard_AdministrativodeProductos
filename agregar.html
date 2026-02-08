@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopMaster - Nuevo Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor-formulario">
+        <h1>Alta de nuevos Productos</h1>
+        <form id="form-nuevo-producto">
+            <div class="form-group">
+                <label>Nombre del producto:</label>
+                <input type="text" id="nuevo-titulo" placeholder="Ej. iPhone 15" required>
+            </div>
+            <div class="form-group">
+                <label>Precio ($):</label>
+                <input type="number" id="nuevo-precio" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label>Categoría:</label>
+                <select id="nuevo-cat" required></select>
+            </div>
+            <div class="form-group">
+                <label>Descripción:</label>
+                <textarea id="nuevo-descripcion" rows="4"></textarea>
+            </div>
+            <div class="botones">
+                <button type="button" class="btn-nav" onclick="window.location.href='index.html'">Volver</button>
+                <button type="submit" class="btn-primario">Guardar Producto</button>
+            </div>
+        </form>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

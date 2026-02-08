@@ -1,0 +1,137 @@
+:root {
+    --color-primario: #8a3030;
+    --color-fondo: #fbcdcd;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fbcdcd 0%, #f4b5b5 100%);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.encabezado {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.titulo-marca {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.contenedor-busqueda {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#buscador {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    outline: none;
+}
+
+#boton-buscar {
+    background: var(--color-primario);
+    border: none;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+
+.tarjeta {
+    background: white;
+    padding: 1rem; 
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 110px; 
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+
+.tarjeta h3 { 
+    font-size: 0.9rem; 
+    margin: 4px 0;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.tarjeta p {
+    font-size: 0.85rem; 
+    margin: 2px 0;
+}
+
+
+.precio {
+    font-size: 1rem; 
+    margin: 2px 0;
+}
+
+.etiqueta, .calificacion {
+    font-size: 0.75rem; 
+    margin: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+.contenido-modal {
+    background: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 25px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.boton-cerrar {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.caja-opinion {
+    background: #fdf2f2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border-left: 4px solid var(--color-primario);
+}
